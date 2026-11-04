@@ -1,25 +1,63 @@
 ---
-import { SITE_AUTHOR, SITE_DESCRIPTION, SITE_TITLE, SITE_URL } from "@/config";
+import {
+  SITE_AUTHOR,
+  SITE_DESCRIPTION,
+  SITE_LOCALE,
+  SITE_OG_IMAGE,
+  SITE_THEME_COLOR,
+  SITE_TITLE,
+  SITE_URL,
+} from "@/config";
 
 interface Props {
   title: string;
   description?: string;
   pagePath?: string;
+  image?: string;
+  imageAlt?: string;
+  type?: "website" | "article";
+  noindex?: boolean;
 }
 
-const { title, description = SITE_DESCRIPTION, pagePath = Astro.url.pathname } = Astro.props;
-const pageTitle = title === SITE_TITLE ? title : `${title} | ${SITE_TITLE}`;
+const {
+  title,
+  description = SITE_DESCRIPTION,
+  pagePath = Astro.url.pathname,
+  image = SITE_OG_IMAGE.path,
+  imageAlt = SITE_OG_IMAGE.alt,
+  type = "website",
+  noindex = false,
+} = Astro.props;
+
+const pageTitle =
+  title === SITE_TITLE || title.includes(SITE_TITLE) ? title : `${title} | ${SITE_TITLE}`;
 const canonical = new URL(pagePath, SITE_URL).toString();
+const ogImage = new URL(image, SITE_URL).toString();
+const robots = noindex ? "noindex, nofollow" : "index, follow";
 ---
 
 <title>{pageTitle}</title>
 <meta name="description" content={description} />
 <meta name="author" content={SITE_AUTHOR} />
+<meta name="robots" content={robots} />
+<meta name="theme-color" content={SITE_THEME_COLOR} />
 <link rel="canonical" href={canonical} />
+
+<meta property="og:site_name" content={SITE_TITLE} />
+<meta property="og:locale" content={SITE_LOCALE} />
 <meta property="og:title" content={pageTitle} />
 <meta property="og:description" content={description} />
-<meta property="og:type" content="website" />
+<meta property="og:type" content={type} />
 <meta property="og:url" content={canonical} />
-<meta name="twitter:card" content="summary" />
+<meta property="og:image" content={ogImage} />
+<meta property="og:image:secure_url" content={ogImage} />
+<meta property="og:image:type" content={SITE_OG_IMAGE.type} />
+<meta property="og:image:width" content={String(SITE_OG_IMAGE.width)} />
+<meta property="og:image:height" content={String(SITE_OG_IMAGE.height)} />
+<meta property="og:image:alt" content={imageAlt} />
+
+<meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content={pageTitle} />
 <meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={ogImage} />
+<meta name="twitter:image:alt" content={imageAlt} />

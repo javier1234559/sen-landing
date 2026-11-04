@@ -1,6 +1,6 @@
 {
-  "name": "Sen",
-  "short_name": "Sen",
+  "name": "Sến",
+  "short_name": "Sến",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
@@ -15,7 +15,9 @@
       "purpose": "maskable"
     }
   ],
-  "theme_color": "#ffffff",
-  "background_color": "#ffffff",
-  "display": "standalone"
+  "theme_color": "#182ba0",
+  "background_color": "#fffaf1",
+  "display": "standalone",
+  "start_url": "/",
+  "lang": "vi"
 }

@@ -14,7 +14,13 @@ const slug = post.data.slug || post.id;
 ---
 
 <ContentLayout>
-  <PageMeta slot="meta" title={post.data.title} description={post.data.description} pagePath={`/blogs/${slug}`} />
+  <PageMeta
+    slot="meta"
+    title={post.data.title}
+    description={post.data.description}
+    pagePath={`/blogs/${slug}`}
+    type="article"
+  />
   <header slot="content" class="not-prose mb-10">
     <p class="text-sm text-muted-foreground">{post.data.date.toLocaleDateString()}</p>
     <h1 class="mt-2 font-display text-5xl font-bold">{post.data.title}</h1>

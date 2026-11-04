@@ -10,9 +10,13 @@ const posts = (await getCollection("blog"))
 ---
 
 <PageLayout>
-  <PageMeta slot="meta" title="Blogs" description="Articles and notes." />
+  <PageMeta
+    slot="meta"
+    title="Bài viết"
+    description="Góc nhìn, câu chuyện và cập nhật từ Sến."
+  />
   <section slot="main" class="mx-auto min-h-[70vh] max-w-3xl px-6 py-12">
-    <h1 class="mb-8 font-display text-5xl font-bold">Blogs</h1>
+    <h1 class="mb-8 font-display text-5xl font-bold">Bài viết</h1>
     <BlogList posts={posts} />
   </section>
 </PageLayout>
