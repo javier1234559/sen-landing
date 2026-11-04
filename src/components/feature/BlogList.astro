@@ -1,0 +1,19 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+  posts: CollectionEntry<"blog">[];
+}
+
+const { posts } = Astro.props;
+---
+
+<div class="grid gap-4">
+  {posts.map((post) => (
+    <a href={`/blogs/${post.data.slug || post.id}`} class="rounded-lg border border-border p-5 transition-colors hover:bg-muted">
+      <p class="text-sm text-muted-foreground">{post.data.date.toLocaleDateString()}</p>
+      <h2 class="mt-1 font-display text-2xl font-semibold">{post.data.title}</h2>
+      {post.data.description && <p class="mt-2 text-muted-foreground">{post.data.description}</p>}
+    </a>
+  ))}
+</div>

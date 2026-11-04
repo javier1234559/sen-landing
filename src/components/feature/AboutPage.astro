@@ -1,0 +1,61 @@
+---
+import { SITE_LINKS } from "@/config/siteLinks";
+---
+
+<main class="about-page">
+  <img class="about-corner about-corner-left" src="/about/left-conner.webp" alt="" aria-hidden="true" />
+  <img class="about-corner about-corner-right" src="/about/right-conner.webp" alt="" aria-hidden="true" />
+
+  <section class="about-hero" aria-labelledby="about-title">
+    <div class="about-copy" data-about-reveal>
+      <h1 id="about-title">CÂU CHUYỆN<br />THƯƠNG HIỆU: SẾN</h1>
+      <p class="about-lead">Khởi nguồn từ năm 2026 - Khi hoài niệm trở thành “cái gu”</p>
+
+      <div class="about-story">
+        <p>Ra đời vào năm 2026 từ những nét phác thảo trên bàn học của nhóm sinh viên sáng tạo, SẾN bắt đầu bằng một trăn trở: <em>“Vì sao nét đẹp hoài niệm lại hay bị tặc lưỡi gọi là sến sủa?”</em></p>
+        <p>Với tụi mình, sến chưa bao giờ là lời chê – <strong>sến chính là một cái gu!</strong> Đó là phút si mê chân thành của tuổi trẻ dành cho di sản Việt giữa nhịp sống phố thị vội vã. SẾN ra đời không để cất ký ức vào tủ kính bảo tàng, mà để thổi sinh khí cho nét đẹp kiến trúc truyền thống tự tin bước xuống phố cùng bạn mỗi ngày.</p>
+        <p>Mỗi nét họa tiết từ SẾN là một mảnh ghép kiến trúc thu nhỏ đong đầy hơi thở đương đại. Gói ghém trên nền vải Canvas mộc 100% cùng chi tiết handmade thủ công, tụi mình chọn không qua trung gian mà trực tiếp đi giao, trao tận tay bạn từng gói Combo tại điểm hẹn quen thuộc. Bởi khoảnh khắc hai ánh mắt chạm nhau, ấy là lúc niềm si mê văn hóa được thắp sáng chân thật nhất.</p>
+      </div>
+
+      <div class="about-slogan">“TOTE CÓ GU – XƯA CÓ CHẤT – SẾN CÓ TẤT”</div>
+      <a href={SITE_LINKS.collection} class="sen-button">Khám phá combo Sến <span>→</span></a>
+    </div>
+
+    <div class="about-art" data-about-reveal>
+      <img src="/about/preview.png" alt="Combo Sến gồm túi tote, quạt vải và keychain" />
+    </div>
+  </section>
+</main>
+
+<style>
+  .about-page { position:relative; min-height:calc(100vh - 5rem); overflow:hidden; background:#fbf6ef; color:#101b45; }
+  .about-hero { position:relative; z-index:1; display:grid; grid-template-columns:minmax(0, 1fr) minmax(420px, .95fr); align-items:center; gap:clamp(2rem, 5vw, 6rem); width:min(100%, 1500px); min-height:calc(100vh - 5rem); margin-inline:auto; padding:clamp(3rem, 6vw, 6rem) clamp(1.25rem, 5vw, 5rem) clamp(8rem, 12vw, 12rem); }
+  .about-copy { position:relative; z-index:2; max-width:700px; }
+  .about-mark { display:block; margin-bottom:1rem; color:#182ba0; font-size:2.2rem; line-height:1; }
+  .about-copy h1 { margin:0; color:#182ba0; font-family:"Maison Neue Black", "Be Vietnam Pro", sans-serif; font-size:clamp(2.6rem, 4.4vw, 5.5rem); font-style:normal; font-weight:900; line-height:1.14; letter-spacing:-.045em; }
+  .about-lead { margin-top:1.35rem; color:#182ba0; font-family:"Maison Neue Extended", "Be Vietnam Pro", sans-serif; font-size:clamp(1rem, 1.5vw, 1.45rem); font-style:italic; font-weight:700; line-height:1.25; }
+  .about-story { display:grid; gap:1rem; margin-top:2rem; max-width:680px; font-family:"Maison Neue Medium", "Be Vietnam Pro", sans-serif; font-size:clamp(.85rem, 1vw, 1rem); line-height:1.45; }
+  .about-story p { margin:0; }
+  .about-story em { padding:.05em .2em; background:#ffe27a; font-style:normal; }
+  .about-story strong { color:#182ba0; }
+  .about-slogan { display:flex; align-items:center; margin-top:1.5rem; color:#182ba0; font-family:"Maison Neue Black", "Be Vietnam Pro", sans-serif; font-size:clamp(1rem, 1.35vw, 1.4rem); line-height:1.2; }
+  .about-copy .sen-button { display:inline-flex; gap:1.2rem; align-items:center; margin-top:1.5rem; border-radius:999px; background:#182ba0; color:#fff; padding:.75rem 1.3rem; font-size:.78rem; font-weight:800; text-transform:uppercase; transition:transform .2s ease, background .2s ease; }
+  .about-copy .sen-button:hover { transform:translateY(-3px); background:#ec3f71; }
+  .about-copy .sen-button span { font-size:1.2rem; }
+  .about-art { position:relative; z-index:1; }
+  .about-art img { display:block; width:100%; height:auto; mix-blend-mode:multiply; }
+  .about-corner { position:absolute; z-index:0; pointer-events:none; mix-blend-mode:multiply; }
+  .about-corner-left { bottom:-5%; left:-12%; width:42%; }
+  .about-corner-right { right:-15%; bottom:-6%; width:48%; }
+  @media (max-width:900px) { .about-hero { grid-template-columns:1fr; gap:2rem; min-height:auto; padding-top:3rem; padding-bottom:8rem; } .about-copy { max-width:760px; } .about-art { width:min(100%, 680px); margin-inline:auto; } .about-corner-left { width:55%; } .about-corner-right { width:58%; } }
+  @media (max-width:580px) { .about-hero { padding:2rem 1.25rem 8rem; } .about-copy h1 { font-size:clamp(2.25rem, 11vw, 3.6rem); line-height:1.12; } .about-lead { font-size:1rem; } .about-story { margin-top:1.5rem; font-size:.9rem; } .about-slogan { align-items:flex-start; font-size:1rem; } .about-corner-left { bottom:0; left:-28%; width:85%; } .about-corner-right { right:-35%; bottom:0; width:90%; } }
+</style>
+
+<script>
+  import { gsap } from "gsap";
+
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (!reducedMotion) {
+    gsap.from("[data-about-reveal]", { autoAlpha: 0, y: 28, duration: .8, stagger: .12, ease: "power3.out" });
+  }
+</script>

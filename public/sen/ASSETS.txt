@@ -1,0 +1,31 @@
+SẾN — ASSET CHECKLIST
+
+Các placeholder trên trang đã có sẵn nền màu / hình khối CSS để layout không vỡ khi chưa có ảnh.
+Khi có asset thật, chỉ cần đặt file đúng tên và thay media-placeholder bằng <img src="..." />.
+
+brand/
+  logo.svg              Logo chữ Sến nền sáng
+  logo-white.svg        Logo chữ Sến nền xanh
+  favicon.svg           Favicon
+
+fonts/
+  MaisonNeue-Medium.woff2  Maison Neue Medium — body
+  MaisonNeue-Black.woff2   Maison Neue Black — headline
+
+models/
+  hero-model.webp       Ảnh model toàn thân, nền tách hoặc ảnh lifestyle dọc (4:5)
+  model-full-01.webp    Ảnh phối đồ / toàn thân cho section campaign
+  model-lifestyle-01.webp Ảnh đời thường, crop ngang (3:2)
+
+products/
+  tote/tote-01.webp     Túi tote hero, nền trong hoặc nền sáng
+  fan/fan-01.webp       Quạt vải chụp chính diện
+  keychain/keychain-01.webp  Keychain handmade chụp cận
+  combo/combo-01.webp   Ảnh combo gồm tote + quạt + keychain
+
+art-direction/
+  vietnam-architecture-01.webp  Chi tiết cửa / mái / hoa văn kiến trúc Việt
+  textile-floral-01.webp        Pattern vải hoa xanh vàng
+  paper-texture.webp             Texture giấy / collage (optional)
+
+Khuyến nghị: WebP/AVIF, ảnh sản phẩm tối thiểu 1200px cạnh dài, ảnh hero tối thiểu 1800px cạnh dài.

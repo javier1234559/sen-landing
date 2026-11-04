@@ -1,0 +1,25 @@
+---
+import { SITE_AUTHOR, SITE_DESCRIPTION, SITE_TITLE, SITE_URL } from "@/config";
+
+interface Props {
+  title: string;
+  description?: string;
+  pagePath?: string;
+}
+
+const { title, description = SITE_DESCRIPTION, pagePath = Astro.url.pathname } = Astro.props;
+const pageTitle = title === SITE_TITLE ? title : `${title} | ${SITE_TITLE}`;
+const canonical = new URL(pagePath, SITE_URL).toString();
+---
+
+<title>{pageTitle}</title>
+<meta name="description" content={description} />
+<meta name="author" content={SITE_AUTHOR} />
+<link rel="canonical" href={canonical} />
+<meta property="og:title" content={pageTitle} />
+<meta property="og:description" content={description} />
+<meta property="og:type" content="website" />
+<meta property="og:url" content={canonical} />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content={pageTitle} />
+<meta name="twitter:description" content={description} />

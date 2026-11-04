@@ -1,0 +1,29 @@
+---
+import "@/styles/index.css";
+import { ClientRouter, fade } from "astro:transitions";
+import Header from "@/components/layout/Header.astro";
+import Footer from "@/components/layout/Footer.astro";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Sến" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <ClientRouter />
+    <slot name="meta" />
+  </head>
+  <body class:list={["min-h-screen bg-background font-sans text-foreground", { "has-landing-header": Astro.url.pathname === "/" }]}>
+    <Header />
+    <main transition:animate={fade({ duration: "0.2s" })}>
+      <slot name="main" />
+    </main>
+    <Footer />
+  </body>
+</html>

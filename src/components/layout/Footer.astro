@@ -1,0 +1,29 @@
+---
+import { CONTACT_LINKS, SOCIAL_LINKS } from "@/config/siteLinks";
+---
+
+<footer id="footer" class="sen-footer">
+  <div class="footer-brand">
+    <img src="/sen/brand/logo-new.svg" alt="Sến" />
+    <p>Thương hiệu phụ kiện thời trang SẾN</p>
+    <p>Địa chỉ: TP. Hồ Chí Minh</p>
+    <a href={CONTACT_LINKS.email}>{CONTACT_LINKS.emailLabel}</a>
+    <a href={CONTACT_LINKS.phone}>{CONTACT_LINKS.phoneLabel}</a>
+  </div>
+  <div class="footer-links">
+    <h2>Hỗ trợ khách hàng</h2>
+    <a href="#footer">Chính sách bảo mật</a>
+    <a href="#footer">Chính sách thanh toán</a>
+    <a href="#footer">Chính sách vận chuyển</a>
+    <a href="#footer">Câu hỏi thường gặp (FAQ)</a>
+  </div>
+  <div class="footer-socials">
+    <h2>Kết nối với SẾN</h2>
+    <div class="footer-social-icons">
+      <a class="social-icon" href={SOCIAL_LINKS.instagram.href} target="_blank" rel="noreferrer" aria-label={SOCIAL_LINKS.instagram.label}><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+      <a class="social-icon" href={SOCIAL_LINKS.facebook.href} target="_blank" rel="noreferrer" aria-label={SOCIAL_LINKS.facebook.label}><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V4h-3c-3.3 0-5 2-5 5v3H6v4h3v5h4v-5h3.5l.5-4H13V9c0-.7.3-1 1-1Z" fill="currentColor"/></svg></a>
+      <a class="social-icon" href={SOCIAL_LINKS.tiktok.href} target="_blank" rel="noreferrer" aria-label={SOCIAL_LINKS.tiktok.label}><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4v10.2a3.4 3.4 0 1 1-2.5-3.3V8.2A7.2 7.2 0 1 0 17 14V8.7c1.1.8 2.4 1.2 4 1.2V6.5c-2.2 0-3.8-1-4.5-2.5H14Z" fill="currentColor"/></svg></a>
+    </div>
+  </div>
+  <small>© {new Date().getFullYear()} SẾN · Phụ kiện everyday mang tinh thần Việt</small>
+</footer>

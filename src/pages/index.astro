@@ -1,0 +1,11 @@
+---
+import PageLayout from "@/layouts/PageLayout.astro";
+import PageMeta from "@/components/PageMeta.astro";
+import SenLanding from "@/components/feature/SenLanding.astro";
+import { SITE_DESCRIPTION, SITE_TITLE } from "@/config";
+---
+
+<PageLayout>
+  <PageMeta slot="meta" title={`${SITE_TITLE} — Phụ kiện mang hồn Việt`} description={SITE_DESCRIPTION} />
+  <SenLanding slot="main" />
+</PageLayout>

@@ -1,0 +1,24 @@
+---
+import { getCollection, render } from "astro:content";
+import ContentLayout from "@/layouts/ContentLayout.astro";
+import PageMeta from "@/components/PageMeta.astro";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog", ({ data }) => !data.draft);
+  return posts.map((post) => ({ params: { slug: post.data.slug || post.id }, props: { post } }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+const slug = post.data.slug || post.id;
+---
+
+<ContentLayout>
+  <PageMeta slot="meta" title={post.data.title} description={post.data.description} pagePath={`/blogs/${slug}`} />
+  <header slot="content" class="not-prose mb-10">
+    <p class="text-sm text-muted-foreground">{post.data.date.toLocaleDateString()}</p>
+    <h1 class="mt-2 font-display text-5xl font-bold">{post.data.title}</h1>
+    {post.data.description && <p class="mt-4 text-lg text-muted-foreground">{post.data.description}</p>}
+  </header>
+  <Content slot="content" />
+</ContentLayout>
