@@ -1,5 +1,5 @@
 ---
-import { CONTACT_LINKS, SOCIAL_LINKS } from "@/config/siteLinks";
+import { CONTACT_LINKS, SITE_LINKS, SOCIAL_LINKS } from "@/config/siteLinks";
 ---
 
 <footer id="footer" class="sen-footer">
@@ -12,10 +12,10 @@ import { CONTACT_LINKS, SOCIAL_LINKS } from "@/config/siteLinks";
   </div>
   <div class="footer-links">
     <h2>Hỗ trợ khách hàng</h2>
-    <a href="#footer">Chính sách bảo mật</a>
-    <a href="#footer">Chính sách thanh toán</a>
-    <a href="#footer">Chính sách vận chuyển</a>
-    <a href="#footer">Câu hỏi thường gặp (FAQ)</a>
+    <a href={SITE_LINKS.policies.privacy}>Chính sách bảo mật</a>
+    <a href={SITE_LINKS.policies.payment}>Chính sách thanh toán</a>
+    <a href={SITE_LINKS.policies.shipping}>Chính sách vận chuyển</a>
+    <a href={SITE_LINKS.policies.terms}>Điều khoản giao dịch</a>
   </div>
   <div class="footer-socials">
     <h2>Kết nối với SẾN</h2>
@@ -25,5 +25,5 @@ import { CONTACT_LINKS, SOCIAL_LINKS } from "@/config/siteLinks";
       <a class="social-icon" href={SOCIAL_LINKS.tiktok.href} target="_blank" rel="noreferrer" aria-label={SOCIAL_LINKS.tiktok.label}><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4v10.2a3.4 3.4 0 1 1-2.5-3.3V8.2A7.2 7.2 0 1 0 17 14V8.7c1.1.8 2.4 1.2 4 1.2V6.5c-2.2 0-3.8-1-4.5-2.5H14Z" fill="currentColor"/></svg></a>
     </div>
   </div>
-  <small>© {new Date().getFullYear()} SẾN · Phụ kiện everyday mang tinh thần Việt</small>
+  <small>© {new Date().getFullYear()} SẾN · Phụ kiện mang tinh thần Việt</small>
 </footer>

@@ -2,14 +2,14 @@
 import PageLayout from "@/layouts/PageLayout.astro";
 import PageMeta from "@/components/PageMeta.astro";
 import AboutPage from "@/components/feature/AboutPage.astro";
-import { SITE_DESCRIPTION, SITE_TITLE } from "@/config";
+import { SITE_TITLE } from "@/config";
 ---
 
 <PageLayout>
   <PageMeta
     slot="meta"
-    title={`Câu chuyện thương hiệu — ${SITE_TITLE}`}
-    description="Sến kể câu chuyện phụ kiện Việt đương đại — thủ công, chất liệu và tinh thần địa phương."
+    title={`Câu chuyện thương hiệu - ${SITE_TITLE}`}
+    description="Sến kể câu chuyện phụ kiện Việt đương đại - thủ công, chất liệu và tinh thần địa phương."
   />
   <AboutPage slot="main" />
 </PageLayout>

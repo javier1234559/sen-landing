@@ -11,78 +11,140 @@ const features = [
 
 <div class="sen-page">
   <section class="sen-hero section-frame">
-    <div class="hero-copy w-full max-w-none" data-gsap="hero-copy">
-      <h1><span>TOTE CÓ GU </span><span>XƯA CÓ CHẤT</span><span>SẾN CÓ TẤT</span></h1>
-      <div class="hero-body-card flex items-center justify-center">
-        <img src="/sen/art/yellow-card-bg.png" alt="" aria-hidden="true" />
+    <h1 class="sr-only">TOTE CÓ GU – XƯA CÓ CHẤT – SẾN CÓ TẤT</h1>
+    <div class="hero-copy" data-gsap="hero-copy">
+      <div class="hero-body-card">
+        <img src="/sen/art/yellow-card-bg.webp" alt="" aria-hidden="true" />
         <div class="text-left">
           <p>SẾN tái định nghĩa từ “sến”.<br />Yêu nét đẹp hoài niệm Việt Nam<br />và thể hiện nó bằng gu thẩm mỹ hiện đại.</p>
           <a href={SITE_LINKS.collection} class="sen-button">SỞ HỮU NGAY COMBO <span>↗</span></a>
         </div>
       </div>
     </div>
-    <div class="ticker" data-gsap="ticker" aria-label="Vietnamese culture, everyday accessories">
-      <div class="ticker-track">
-        <span>VIETNAMESE CULTURE</span><b>✦</b><span>EVERYDAY ACCESSORIES</span><b>✦</b><span>SẾN</span><b>✦</b><span>VIETNAMESE CULTURE</span><b>✦</b>
-        <span>VIETNAMESE CULTURE</span><b>✦</b><span>EVERYDAY ACCESSORIES</span><b>✦</b><span>SẾN</span><b>✦</b><span>VIETNAMESE CULTURE</span><b>✦</b>
-      </div>
-    </div>
   </section>
 
-  <section id="story" class="story section-frame" data-gsap="reveal">
-    <div class="story-architecture"><img src="/introduce/architecture.webp" alt="Chi tiết kiến trúc Việt Nam xưa" /></div>
-    <div class="story-copy"><h2>SẾN CÓ GU<br />XƯA CÓ CHẤT<br />SẾN CÓ TẤT</h2></div>
-    <div class="story-about"><img src="/introduce/about.webp" alt="Minh họa kiến trúc Việt Nam" /><div class="story-about-content"><p>Thương hiệu phụ kiện thời trang và phong cách sống lấy cảm hứng từ kiến trúc Việt Nam xưa. Dành riêng cho Gen Z yêu văn hóa Việt nhưng cần thiết kế hiện đại, hợp gu.</p><a href={SITE_LINKS.collection} class="circle-arrow" aria-label="Khám phá câu chuyện">↗</a></div></div>
+  <section id="story" class="story section-frame">
+    <div class="story-architecture" data-gsap="card"><img src="/introduce/architecture.webp" alt="Chi tiết kiến trúc Việt Nam xưa" /></div>
+    <div class="story-copy" data-gsap="card"><h2>SẾN CÓ GU<br />XƯA CÓ CHẤT<br />SẾN CÓ TẤT</h2></div>
+    <div class="story-about" data-gsap="card"><img src="/introduce/about.webp" alt="Minh họa kiến trúc Việt Nam" /><div class="story-about-content"><p>Thương hiệu phụ kiện thời trang và phong cách sống lấy cảm hứng từ kiến trúc Việt Nam xưa. Dành riêng cho Gen Z yêu văn hóa Việt nhưng cần thiết kế hiện đại, hợp gu.</p><a href={SITE_LINKS.collection} class="circle-arrow" aria-label="Khám phá câu chuyện">↗</a></div></div>
   </section>
 
-  <section id="collection" class="collection" data-gsap="reveal">
-    <div class="section-heading"><div><span class="eyebrow">Designed for everyday</span><h2>The Sến <em>collection</em></h2></div><div class="slider-controls"><span>01 / 03</span><button aria-label="Previous"><img src="/sen/icons/icon-arrow-left.svg" alt="" /></button><button aria-label="Next"><img src="/sen/icons/icon-arrow-right.svg" alt="" /></button></div></div>
+  <section id="collection" class="collection">
+    <div class="section-heading" data-gsap="fade-up"><div><span class="eyebrow">Designed for everyday</span><h2>The Sến <em>collection</em></h2></div></div>
     <div class="collection-grid">
-      <article class="combo-card" data-gsap="collection-item">
-        <img class="combo-image" src="/collection/combo.webp" alt="Combo Sến trọn vẹn gồm túi tote, quạt vải và keychain" />
-        <div class="combo-copy"><h3>Combo Sến trọn vẹn</h3><p>Túi Tote + Quạt Vải + Keychain</p><a href="#footer" class="sen-button">Đặt mua combo <span>↗</span></a></div>
+      <article class="combo-card" data-gsap="card">
+        <img class="combo-image" src="/collection/product-image.webp" alt="COMBO SẾN gồm túi tote, quạt vải và keychain" />
+        <div class="combo-copy"><h3>COMBO SẾN</h3><p>Túi Tote Canvas + Keychain Handmade + Quạt Vải</p><a href="#footer" class="sen-button">Đặt mua combo giao tận tay <span>↗</span></a></div>
       </article>
-      <article class="product-card product-tote" data-gsap="collection-item"><img class="product-image" src="/collection/tote-basket.webp" alt="Túi Tote Canvas Sến" /><div class="product-info"><div><h3>Túi Tote Canvas</h3><p>Vải canvas mộc tự nhiên</p></div><a href="#footer" class="circle-arrow" aria-label="Xem Túi Tote Canvas">↗</a></div></article>
-      <article class="product-card product-keychain" data-gsap="collection-item"><img class="product-image" src="/collection/keychain.webp" alt="Keychain Handmade Sến" /><div class="product-info"><div><h3>Keychain Handmade</h3><p>Móc khóa thủ công</p></div><a href="#footer" class="circle-arrow" aria-label="Xem Keychain Handmade">↗</a></div></article>
-      <article class="product-card product-fan" data-gsap="collection-item"><img class="product-image" src="/collection/hand-fan.webp" alt="Quạt Vải Sến" /><div class="product-info"><div><h3>Quạt Vải</h3><p>Everyday accessory</p></div><a href="#footer" class="circle-arrow" aria-label="Xem Quạt Vải">↗</a></div></article>
+      <article class="product-card product-tote" data-gsap="card"><img class="product-image" src="/collection/tote-basket.webp" alt="Túi Tote Canvas Sến" /><div class="product-info"><div><h3>Túi tote canvas</h3><p>Vải canvas mộc tự nhiên, hạn chế hóa chất nhuộm màu, thân thiện môi trường.</p></div><a href="#footer" class="circle-arrow" aria-label="Xem Túi Tote Canvas">↗</a></div></article>
+      <article class="product-card product-keychain" data-gsap="card"><img class="product-image" src="/collection/keychain.webp" alt="Keychain Handmade Sến" /><div class="product-info"><div><h3>Keychain handmade</h3><p>Điểm nhấn cá nhân hóa độc bản.</p></div><a href="#footer" class="circle-arrow" aria-label="Xem Keychain Handmade">↗</a></div></article>
+      <article class="product-card product-fan" data-gsap="card"><img class="product-image" src="/collection/hand-fan.webp" alt="Quạt Vải Sến" /><div class="product-info"><div><h3>Quạt vải</h3><p>Hoàn thiện phong cách hoài niệm, đồng bộ bộ sản phẩm.</p></div><a href="#footer" class="circle-arrow" aria-label="Xem Quạt Vải">↗</a></div></article>
     </div>
   </section>
 
-  <section class="marquee-gallery" data-gsap="reveal" aria-label="Sến everyday accessories">
-    <div class="marquee-window">
+  <section class="marquee-gallery" aria-label="Sến everyday accessories">
+    <div class="marquee-window" data-gsap="fade-up">
       <div class="marquee-track">
-        <div class="marquee-card"><img src="/marquee-images/1.png" alt="Phụ kiện Sến" /></div>
-        <div class="marquee-card"><img src="/marquee-images/2.png" alt="Túi tote Sến" /></div>
-        <div class="marquee-card"><img src="/marquee-images/3.png" alt="Họa tiết Sến" /></div>
-        <div class="marquee-card"><img src="/marquee-images/4.png" alt="Phụ kiện mang tinh thần Việt" /></div>
-        <div class="marquee-card" aria-hidden="true"><img src="/marquee-images/1.png" alt="" /></div>
-        <div class="marquee-card" aria-hidden="true"><img src="/marquee-images/2.png" alt="" /></div>
-        <div class="marquee-card" aria-hidden="true"><img src="/marquee-images/3.png" alt="" /></div>
-        <div class="marquee-card" aria-hidden="true"><img src="/marquee-images/4.png" alt="" /></div>
+        <div class="marquee-card"><img src="/marquee-images/1.webp" alt="Phụ kiện Sến" /></div>
+        <div class="marquee-card"><img src="/marquee-images/2.webp" alt="Túi tote Sến" /></div>
+        <div class="marquee-card"><img src="/marquee-images/3.webp" alt="Họa tiết Sến" /></div>
+        <div class="marquee-card"><img src="/marquee-images/4.webp" alt="Phụ kiện mang tinh thần Việt" /></div>
+        <div class="marquee-card" aria-hidden="true"><img src="/marquee-images/1.webp" alt="" /></div>
+        <div class="marquee-card" aria-hidden="true"><img src="/marquee-images/2.webp" alt="" /></div>
+        <div class="marquee-card" aria-hidden="true"><img src="/marquee-images/3.webp" alt="" /></div>
+        <div class="marquee-card" aria-hidden="true"><img src="/marquee-images/4.webp" alt="" /></div>
       </div>
     </div>
   </section>
 
-  <section class="values section-frame" data-gsap="reveal">
-    {features.map(({ icon, text }) => <div class="value-item"><img class="value-icon" src={icon} alt="" aria-hidden="true" /><span>{text.split("\n").map((line) => <>{line}<br /></>)}</span></div>)}
+  <section class="values section-frame">
+    {features.map(({ icon, text }) => <div class="value-item" data-gsap="card"><img class="value-icon" src={icon} alt="" aria-hidden="true" /><span>{text.split("\n").map((line) => <>{line}<br /></>)}</span></div>)}
   </section>
 </div>
 
 <style>
   .sen-page { width:100%; margin:0; padding:0 0 2rem; }
   .section-frame { position:relative; overflow:hidden; background:#fffaf1cc; }
-  .sen-hero { min-height:clamp(540px, 43vw, 790px); position:relative; display:block; overflow:visible; border-width:0; border-radius:0; isolation:isolate; background:#f8eee2; }
-  .sen-hero::before { content:""; position:absolute; z-index:-1; inset:0; background:url('/sen/models/hero-bg.png') center top / cover no-repeat; }
-  .hero-copy { position:absolute; z-index:2; top:18%; left:clamp(3rem, 9vw, 10rem); width:min(44%, 700px); padding:0; }
+  .sen-hero {
+    position: relative;
+    display: block;
+    width: 100%;
+    aspect-ratio: 992 / 612;
+    min-height: clamp(420px, 62vw, 820px);
+    overflow: hidden;
+    isolation: isolate;
+    background: #40e8d7;
+    margin-bottom: 8px;
+  }
+  .sen-hero::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background: url("/og-image.png") center center / cover no-repeat;
+  }
+  .hero-copy {
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    padding: clamp(1rem, 2.5vw, 2rem) clamp(1rem, 4vw, 3.5rem) clamp(1.25rem, 3vw, 2.5rem);
+  }
   .eyebrow { display:block; margin-bottom:1rem; font-size:.68rem; font-weight:800; letter-spacing:.14em; text-transform:uppercase; }
-  h1, h2, h3, p { margin:0; } h1, h2 { font-family:"Maison Neue Black", "Be Vietnam Pro", sans-serif; font-weight:900; line-height:1.04; letter-spacing:-.055em; } h1 { display:flex; flex-direction:column; width:max-content; max-width:100%; color:#182ba0; font-family:"Maison Neue Extended", "Be Vietnam Pro", sans-serif; font-size:clamp(2.7rem, 5.4vw, 5.8rem); font-style:italic; font-weight:800; line-height:1.06; letter-spacing:-.045em; transform:rotate(-6deg); transform-origin:left center; } h1 span { display:block; white-space:nowrap; } h1 em, h2 em { color:#ec3f71; font-style:normal; } h1 strong { color:#182ba0; text-shadow:none; font-weight:900; } .hero-copy p { margin:0 0 1.25rem; font-family:"Maison Neue Medium", "Be Vietnam Pro", sans-serif; font-size:clamp(.92rem, 1.1vw, 1.1rem); font-weight:500; line-height:1.45; }
-  .hero-body-card { position:relative; width:min(100%, 570px); margin-top:clamp(1.2rem, 2vw, 2rem); margin-left:clamp(1rem, 2vw, 2rem); padding:3rem 2.5rem 2rem 2.75rem; } .hero-body-card > img { position:absolute; z-index:-1; inset:-1.1rem -1.2rem -1.1rem -1.2rem; width:calc(100% + 2.4rem); height:calc(100% + 2.2rem); object-fit:fill; } .hero-body-card > div { position:relative; width:max-content; max-width:100%; }
-  .sen-button { display:inline-flex; gap:1.2rem; align-items:center; border-radius:999px; background:#182ba0; color:#fff; padding:.75rem 1.3rem; font-size:.78rem; font-weight:800; text-transform:uppercase; transition:transform .2s ease, background .2s ease; } .sen-button:hover { transform:translateY(-3px); background:#ec3f71; } .sen-button span { font-size:1.2rem; }
-  .hero-sticker { position:absolute; right:2rem; top:2rem; z-index:3; color:#ec3f71; font-family:"Maison Neue Black", "Be Vietnam Pro", sans-serif; font-size:2rem; transform:rotate(12deg); } .hero-sticker small { font-family:"Maison Neue Medium", "Be Vietnam Pro", sans-serif; font-size:.5rem; letter-spacing:.12em; }
-  .ticker { position:absolute; z-index:4; bottom:0; left:0; right:0; overflow:hidden; padding:.7rem 1.2rem; background:#182ba0; color:#fff; font-size:.67rem; font-weight:800; letter-spacing:.06em; transform:none; border-radius:0; } .ticker-track { display:flex; width:max-content; align-items:center; gap:clamp(2rem, 7vw, 8rem); animation:sen-marquee 28s linear infinite; white-space:nowrap; } .ticker b { color:#ffd200; } @keyframes sen-marquee { from { transform:translateX(0); } to { transform:translateX(-50%); } } @media (prefers-reduced-motion: reduce) { .ticker-track { animation-play-state:paused; } }
-  .story { display:grid; grid-template-columns:1.08fr .95fr 1.2fr; align-items:stretch; min-height:310px; padding:0; border-top:0; background:#fffaf1; } .story-architecture { min-width:0; overflow:hidden; } .story-architecture img { display:block; width:100%; height:100%; object-fit:cover; object-position:center; mix-blend-mode:multiply; } .story-copy { display:flex; flex-direction:column; justify-content:center; padding:2rem clamp(1.5rem, 3vw, 3.5rem); } .story-copy h2 { color:#182ba0; font-family:"Maison Neue Extended", "Be Vietnam Pro", sans-serif; font-size:clamp(2rem, 3.1vw, 3.8rem); font-style:italic; font-weight:800; line-height:.94; letter-spacing:-.05em; } .story-about { display:grid; grid-template-columns:minmax(0, 1fr) minmax(180px, .9fr); align-items:center; min-width:0; overflow:hidden; padding:2rem clamp(1.5rem, 3vw, 3rem); } .story-about > img { grid-column:2; grid-row:1; display:block; width:100%; max-width:360px; height:auto; margin-inline:auto; mix-blend-mode:multiply; } .story-about-content { grid-column:1; grid-row:1; z-index:1; width:auto; } .story-about-content p { max-width:330px; font-family:"Maison Neue Medium", "Be Vietnam Pro", sans-serif; font-size:clamp(.78rem, 1vw, .95rem); font-weight:500; line-height:1.45; } .circle-arrow { display:grid; place-items:center; flex:0 0 auto; width:2.4rem; height:2.4rem; border:1px solid currentColor; border-radius:50%; font-weight:800; } .story-about .circle-arrow { margin-top:1rem; }
-  .collection { padding:clamp(2.5rem, 5vw, 5rem) clamp(1rem, 5vw, 5rem) 3rem; background:#fffaf1; } .section-heading { display:flex; align-items:end; justify-content:space-between; margin-bottom:1.5rem; } .section-heading h2 { color:#182ba0; font-size:clamp(2.7rem, 5.5vw, 5.8rem); font-style:italic; text-transform:uppercase; } .section-heading h2 em { color:#ec3f71; } .slider-controls { display:flex; align-items:center; gap:.7rem; font-size:.7rem; font-weight:800; } .slider-controls button { display:grid; place-items:center; width:2.35rem; height:2.35rem; border:0; background:transparent; color:inherit; cursor:pointer; } .slider-controls button img { width:100%; height:100%; object-fit:contain; } .collection-grid { display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:clamp(1.25rem, 3vw, 3rem); align-items:start; } .combo-card { display:grid; grid-column:1 / -1; grid-template-columns:minmax(0, 1.45fr) minmax(280px, .8fr); gap:clamp(1.5rem, 4vw, 5rem); align-items:center; min-width:0; background:transparent; } .product-card { min-width:0; background:transparent; } .combo-image, .product-image { display:block; width:100%; height:auto; object-fit:cover; } .combo-image { aspect-ratio:550 / 310; } .product-image { aspect-ratio:329 / 532; } .combo-copy { max-width:31rem; padding:.85rem .15rem 0; } .combo-copy h3, .product-info h3 { color:#182ba0; font-family:"Maison Neue Black", "Be Vietnam Pro", sans-serif; font-size:clamp(1.2rem, 1.8vw, 2rem); line-height:1.05; } .combo-copy p, .product-info p { margin-top:.45rem; color:#182ba0; font-size:.78rem; font-weight:500; } .combo-copy .sen-button { margin-top:1rem; } .product-info { display:flex; justify-content:space-between; align-items:end; gap:.5rem; padding:.8rem .15rem 0; } .product-info h3 { font-size:clamp(.9rem, 1.1vw, 1.1rem); } .circle-arrow { width:2.2rem; height:2.2rem; }
-  .values { display:grid; grid-template-columns:repeat(4,1fr); min-height:125px; border-top:0; border-radius:0 0 1.4rem 1.4rem; background:#fffaf1 url('/pre-footer/background.webp') center / cover no-repeat; } .value-item { display:flex; justify-content:center; align-items:center; gap:1rem; padding:1.25rem clamp(.75rem, 2vw, 2rem); color:#182ba0; font-family:"Maison Neue Medium", "Be Vietnam Pro", sans-serif; font-size:clamp(.68rem, .9vw, .9rem); font-weight:700; line-height:1.2; } .value-icon { flex:0 0 auto; width:clamp(2.4rem, 4vw, 4rem); height:clamp(2.4rem, 4vw, 4rem); object-fit:contain; }
+  h1, h2, h3, p { margin:0; }
+  h1, h2 { font-family:"Maison Neue Black", "Be Vietnam Pro", sans-serif; font-weight:900; line-height:1.04; letter-spacing:-.055em; }
+  h1 em, h2 em { color:#ec3f71; font-style:normal; }
+  .hero-copy p {
+    margin: 0 0 1.25rem;
+    font-family: "Maison Neue Medium", "Be Vietnam Pro", sans-serif;
+    font-size: clamp(0.92rem, 1.1vw, 1.1rem);
+    font-weight: 500;
+    line-height: 1.45;
+  }
+  .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+  .hero-body-card { position:relative; width:min(100%, 570px); padding:3rem 2.5rem 2rem 2.75rem; }
+  .hero-body-card > img { position:absolute; z-index:-1; inset:-1.1rem -1.2rem -1.1rem -1.2rem; width:calc(100% + 2.4rem); height:calc(100% + 2.2rem); object-fit:fill; }
+  .hero-body-card > div { position:relative; width:max-content; max-width:100%; padding:2rem; }
+
+  .sen-button { display:inline-flex; gap:1.2rem; align-items:center; border-radius:999px; background:#182ba0; color:#fff; padding:.75rem 1.3rem; font-size:.78rem; font-weight:800; text-transform:uppercase; transition:transform .2s ease, background .2s ease; }
+  .sen-button:hover { transform:translateY(-3px); background:#ec3f71; }
+  .sen-button span { font-size:1.2rem; }
+
+  .story { display:grid; grid-template-columns:1.08fr .95fr 1.2fr; align-items:stretch; min-height:310px; padding:0; border-top:0; background:#fffaf1; }
+  .story-architecture { min-width:0; overflow:hidden; }
+  .story-architecture img { display:block; width:100%; height:100%; object-fit:cover; object-position:center; mix-blend-mode:multiply; }
+  .story-copy { display:flex; flex-direction:column; justify-content:center; padding:2rem clamp(1.5rem, 3vw, 3.5rem); }
+  .story-copy h2 { color:#182ba0; font-family:"Maison Neue Extended", "Be Vietnam Pro", sans-serif; font-size:clamp(2rem, 3.1vw, 3.8rem); font-style:italic; font-weight:800; line-height:1.2; letter-spacing:-.05em; }
+  .story-about { display:grid; grid-template-columns:minmax(0, 1fr) minmax(180px, .9fr); align-items:center; min-width:0; overflow:hidden; padding:2rem clamp(1.5rem, 3vw, 3rem); }
+  .story-about > img { grid-column:2; grid-row:1; display:block; width:100%; max-width:360px; height:auto; margin-inline:auto; mix-blend-mode:multiply; }
+  .story-about-content { grid-column:1; grid-row:1; z-index:1; width:auto; }
+  .story-about-content p { max-width:330px; font-family:"Maison Neue Medium", "Be Vietnam Pro", sans-serif; font-size:clamp(.78rem, 1vw, .95rem); font-weight:500; line-height:1.45; }
+  .circle-arrow { display:grid; place-items:center; flex:0 0 auto; width:2.4rem; height:2.4rem; border:1px solid currentColor; border-radius:50%; font-weight:800; }
+  .story-about .circle-arrow { margin-top:1rem; }
+
+  .collection { padding:clamp(2.5rem, 5vw, 5rem) clamp(1rem, 5vw, 5rem) 3rem; background:#fffaf1; }
+  .section-heading { display:flex; align-items:end; justify-content:space-between; margin-bottom:1.5rem; }
+  .section-heading h2 { color:#182ba0; font-size:clamp(2.7rem, 5.5vw, 5.8rem); font-style:italic; text-transform:uppercase; }
+  .section-heading h2 em { color:#ec3f71; }
+  .collection-grid { display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:clamp(1.25rem, 3vw, 3rem); align-items:start; }
+  .combo-card { display:grid; grid-column:1 / -1; grid-template-columns:minmax(0, 1.45fr) minmax(280px, .8fr); gap:clamp(1.5rem, 4vw, 5rem); align-items:center; min-width:0; background:transparent; }
+  .product-card { min-width:0; background:transparent; }
+  .combo-image, .product-image { display:block; width:100%; height:auto; object-fit:cover; }
+  .combo-image { aspect-ratio:550 / 310; border-radius:1.25rem; }
+  .product-image { aspect-ratio:329 / 532; }
+  .combo-copy { max-width:31rem; padding:.85rem .15rem 0; }
+  .combo-copy h3, .product-info h3 { color:#182ba0; font-family:"Maison Neue Black", "Be Vietnam Pro", sans-serif; font-size:clamp(1.2rem, 1.8vw, 2rem); line-height:1.05; }
+  .combo-copy p, .product-info p { margin-top:.45rem; color:#182ba0; font-size:.78rem; font-weight:500; }
+  .combo-copy .sen-button { margin-top:1rem; }
+  .product-info { display:flex; justify-content:space-between; align-items:end; gap:.5rem; padding:.8rem .15rem 0; }
+  .product-info h3 { font-size:clamp(.9rem, 1.1vw, 1.1rem); }
+  .circle-arrow { width:2.2rem; height:2.2rem; }
+
+  .values { display:grid; grid-template-columns:repeat(4,1fr); min-height:125px; border-top:0; border-radius:0 0 1.4rem 1.4rem; background:#fffaf1 url('/pre-footer/background.webp') center / cover no-repeat; }
+  .value-item { display:flex; justify-content:center; align-items:center; gap:1rem; padding:1.25rem clamp(.75rem, 2vw, 2rem); color:#182ba0; font-family:"Maison Neue Medium", "Be Vietnam Pro", sans-serif; font-size:clamp(.68rem, .9vw, .9rem); font-weight:700; line-height:1.2; }
+  .value-icon { flex:0 0 auto; width:clamp(2.4rem, 4vw, 4rem); height:clamp(2.4rem, 4vw, 4rem); object-fit:contain; }
   .marquee-gallery { overflow:hidden; padding:clamp(1.5rem, 3vw, 3rem) 0 clamp(2.5rem, 5vw, 5rem); background:#fffaf1; }
   .marquee-window { overflow:hidden; width:100%; }
   .marquee-track { display:flex; width:max-content; gap:clamp(.75rem, 2vw, 1.5rem); animation:sen-image-marquee 32s linear infinite; }
@@ -91,60 +153,187 @@ const features = [
   .marquee-card img { display:block; width:100%; height:clamp(10rem, 16vw, 15rem); object-fit:cover; }
   @keyframes sen-image-marquee { from { transform:translateX(0); } to { transform:translateX(calc(-50% - .75rem)); } }
   @media (prefers-reduced-motion: reduce) { .marquee-track { animation-play-state:paused; } }
-  @media (max-width:900px) { .hero-copy { top:19%; left:clamp(2rem, 7vw, 5rem); width:min(52%, 570px); } .hero-body-card { width:min(100%, 570px); } .story { grid-template-columns:1fr 1fr; } .story-architecture { min-height:250px; } .story-copy { padding-inline:1.5rem; } .story-copy h2 { font-size:clamp(1.8rem, 4vw, 3rem); line-height:1.04; } .story-about { grid-column:1 / -1; min-height:220px; } .story-about-content { width:55%; } .collection-grid { grid-template-columns:repeat(3, minmax(0, 1fr)); gap:1.25rem; } .combo-card { grid-column:1 / -1; grid-template-columns:1.2fr 1fr; } }
-  @media (max-width:580px) { .sen-hero { min-height:650px; } .sen-hero::before { background-position:78% top; } .hero-copy { top:11%; left:7%; width:86%; } h1 { width:100%; font-size:clamp(2.35rem, 10.5vw, 3.1rem); line-height:1.06; letter-spacing:-.055em; } .hero-body-card { width:calc(100% - 1rem); padding:1.5rem 1.3rem; margin-top:1.5rem; } .hero-body-card > img { inset:-.8rem -.7rem; width:calc(100% + 1.4rem); height:calc(100% + 1.6rem); } .hero-body-card > div { width:100%; } .ticker { font-size:.5rem; } .story { grid-template-columns:1fr; } .story-architecture { min-height:210px; } .story-copy { min-height:250px; padding:2rem 1.5rem; } .story-copy h2 { font-size:clamp(2.2rem, 10vw, 3.2rem); } .story-about { grid-template-columns:1fr; grid-column:auto; min-height:420px; padding:2rem 1.5rem; } .story-about-content { width:72%; } .story-about > img { grid-column:1; grid-row:1; align-self:end; justify-self:end; width:78%; margin-top:5rem; } .collection { padding:2rem 1rem 1rem; } .section-heading { align-items:start; flex-direction:column; gap:1rem; } .collection-grid { grid-template-columns:1fr; gap:2rem; } .combo-card { grid-column:auto; grid-template-columns:1fr; gap:1rem; } .combo-copy { padding-top:.65rem; } .product-info { align-items:start; } .product-info .circle-arrow { display:none; } .marquee-card { flex-basis:13rem; } .marquee-card img { height:10rem; } .values { grid-template-columns:repeat(2,1fr); } }
+
+  @media (max-width:900px) {
+    .sen-hero { min-height: clamp(460px, 70vw, 640px); }
+    .hero-copy { padding: 1.25rem 1.25rem 1.5rem; }
+    .hero-body-card { width: min(100%, 570px); }
+    .story { grid-template-columns:1fr 1fr; }
+    .story-architecture { min-height:250px; }
+    .story-copy { padding-inline:1.5rem; }
+    .story-copy h2 { font-size:clamp(1.8rem, 4vw, 3rem); line-height:1.18; }
+    .story-about { grid-column:1 / -1; min-height:220px; }
+    .story-about-content { width: min(58%, 22rem); }
+    .story-about-content p { font-size: 0.9rem; line-height: 1.5; }
+    .collection-grid { grid-template-columns:repeat(3, minmax(0, 1fr)); gap:1.25rem; }
+    .combo-card { grid-column:1 / -1; grid-template-columns:1.2fr 1fr; }
+  }
+
+  @media (max-width:580px) {
+    .sen-hero {
+      aspect-ratio: auto;
+      min-height: min(78svh, 640px);
+    }
+    .sen-hero::before { background-position: center center; background-size: cover; }
+    .hero-copy { padding: 1rem 1rem 1.4rem; }
+    /* Keep yellow fully on-screen; inset copy inside the brush */
+    .hero-body-card {
+      width: 100%;
+      padding: 2.15rem 2rem 2rem 2.25rem;
+    }
+    .hero-body-card > img {
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .hero-body-card > div { width: 100%; }
+    .hero-copy p {
+      font-size: 0.92rem;
+      line-height: 1.5;
+    }
+    .hero-body-card .sen-button {
+      padding: 0.7rem 1.05rem;
+      font-size: 0.68rem;
+      gap: 0.75rem;
+    }
+    .story { grid-template-columns:1fr; }
+    .story-architecture { min-height:210px; }
+    .story-copy { min-height:250px; padding:2rem 1.5rem; }
+    .story-copy h2 { font-size:clamp(2.2rem, 10vw, 3.2rem); }
+    /* Stack text above art so copy stays readable */
+    .story-about {
+      display: flex;
+      flex-direction: column;
+      grid-column: auto;
+      gap: 1.25rem;
+      min-height: auto;
+      padding: 2rem 1.5rem 2.25rem;
+    }
+    .story-about-content {
+      order: 1;
+      width: 100%;
+      max-width: 100%;
+    }
+    .story-about-content p {
+      max-width: none;
+      font-size: 0.95rem;
+      line-height: 1.55;
+    }
+    .story-about > img {
+      order: 2;
+      grid-column: auto;
+      grid-row: auto;
+      align-self: center;
+      justify-self: auto;
+      width: min(78%, 16rem);
+      margin: 0 auto;
+    }
+    .collection { padding:2rem 1rem 1rem; }
+    .section-heading { align-items:start; flex-direction:column; gap:1rem; }
+    .collection-grid { grid-template-columns:1fr; gap:2rem; }
+    .combo-card { grid-column:auto; grid-template-columns:1fr; gap:1rem; }
+    .combo-copy { padding-top:.65rem; }
+    .combo-image { border-radius: 1rem; }
+    .product-info { align-items:start; }
+    .product-info .circle-arrow { display:none; }
+    .marquee-card { flex-basis:13rem; }
+    .marquee-card img { height:10rem; }
+    .values { grid-template-columns:repeat(2,1fr); }
+  }
 </style>
 
 <script>
   import { gsap } from "gsap";
-  import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-  gsap.registerPlugin(ScrollTrigger);
+  let ctx: gsap.Context | undefined;
+  let observer: IntersectionObserver | undefined;
+  let bootedPath = "";
 
-  const root = document.querySelector(".sen-page");
-  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const prefersReducedMotion = () => window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  if (root && !reducedMotion) {
-    const context = gsap.context(() => {
-      const heroCopy = root.querySelector("[data-gsap='hero-copy']");
-      const heroHeading = heroCopy?.querySelector("h1");
-      const heroCard = heroCopy?.querySelector(".hero-body-card");
+  function initSenMotion() {
+    const root = document.querySelector(".sen-page");
+    const path = `${location.pathname}${location.search}`;
+    if (!root || prefersReducedMotion()) return;
+    if (ctx && bootedPath === path) return;
 
-      if (heroHeading) gsap.from(heroHeading, { autoAlpha: 0, y: 28, duration: 0.9, ease: "power3.out" });
-      if (heroCard) gsap.from(heroCard, { autoAlpha: 0, y: 26, duration: 0.75, delay: 0.25, ease: "power3.out" });
-      gsap.from("[data-gsap='ticker']", { autoAlpha: 0, y: 18, duration: 0.65, delay: 0.55, ease: "power2.out" });
+    observer?.disconnect();
+    ctx?.revert();
+    ctx = undefined;
+    bootedPath = path;
 
-      gsap.utils.toArray<HTMLElement>("[data-gsap='reveal']").forEach((section) => {
-        gsap.from(section.children, {
-          autoAlpha: 0,
-          y: 34,
+    ctx = gsap.context(() => {
+      const heroCard = root.querySelector(".hero-body-card");
+      if (heroCard) {
+        gsap.fromTo(
+          heroCard,
+          { autoAlpha: 0, y: 36, scale: 0.96 },
+          { autoAlpha: 1, y: 0, scale: 1, duration: 0.9, delay: 0.08, ease: "power3.out", clearProps: "transform" },
+        );
+      }
+
+      const revealEls = [
+        ...root.querySelectorAll<HTMLElement>("[data-gsap='fade-up']"),
+        ...root.querySelectorAll<HTMLElement>("[data-gsap='card']"),
+      ];
+
+      const playReveal = (el: HTMLElement, index: number) => {
+        gsap.to(el, {
+          autoAlpha: 1,
+          y: 0,
+          scale: 1,
           duration: 0.8,
-          stagger: 0.12,
+          delay: (index % 4) * 0.06,
           ease: "power3.out",
-          scrollTrigger: { trigger: section, start: "top 84%", once: true },
+          clearProps: "transform",
+          overwrite: true,
         });
+      };
+
+      observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            const el = entry.target as HTMLElement;
+            playReveal(el, revealEls.indexOf(el));
+            observer?.unobserve(el);
+          });
+        },
+        { threshold: 0.08, rootMargin: "40px 0px -4% 0px" },
+      );
+
+      revealEls.forEach((el, index) => {
+        gsap.set(el, { autoAlpha: 0, y: 36, scale: 0.98 });
+        const rect = el.getBoundingClientRect();
+        const inView = rect.top < window.innerHeight * 0.96 && rect.bottom > 40;
+        if (inView) playReveal(el, index);
+        else observer?.observe(el);
       });
 
-      const collectionItems = gsap.utils.toArray<HTMLElement>("[data-gsap='collection-item']");
-      gsap.from(collectionItems, {
-        autoAlpha: 0,
-        y: 38,
-        duration: 0.75,
-        stagger: 0.1,
-        ease: "power3.out",
-        scrollTrigger: { trigger: ".collection-grid", start: "top 84%", once: true },
-      });
-
-      gsap.utils.toArray<HTMLElement>(".product-card").forEach((card) => {
+      root.querySelectorAll<HTMLElement>(".product-card").forEach((card) => {
         const image = card.querySelector<HTMLElement>(".product-image");
         if (!image) return;
-        card.addEventListener("mouseenter", () => gsap.to(image, { y: -8, duration: 0.25, ease: "power2.out" }));
-        card.addEventListener("mouseleave", () => gsap.to(image, { y: 0, duration: 0.3, ease: "power2.out" }));
+        card.addEventListener("mouseenter", () => gsap.to(image, { y: -10, scale: 1.02, duration: 0.3, ease: "power2.out" }));
+        card.addEventListener("mouseleave", () => gsap.to(image, { y: 0, scale: 1, duration: 0.35, ease: "power2.out" }));
       });
 
-      context.add(() => ScrollTrigger.refresh());
+      const combo = root.querySelector<HTMLElement>(".combo-card");
+      const comboImage = combo?.querySelector<HTMLElement>(".combo-image");
+      if (combo && comboImage) {
+        combo.addEventListener("mouseenter", () => gsap.to(comboImage, { scale: 1.015, duration: 0.35, ease: "power2.out" }));
+        combo.addEventListener("mouseleave", () => gsap.to(comboImage, { scale: 1, duration: 0.4, ease: "power2.out" }));
+      }
     }, root);
-
-    window.addEventListener("beforeunload", () => context.revert(), { once: true });
   }
+
+  document.addEventListener("astro:page-load", initSenMotion);
+  document.addEventListener("astro:before-swap", () => {
+    observer?.disconnect();
+    observer = undefined;
+    ctx?.revert();
+    ctx = undefined;
+    bootedPath = "";
+  });
+
+  if (document.querySelector(".sen-page")) initSenMotion();
 </script>

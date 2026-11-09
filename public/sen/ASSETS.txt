@@ -8,9 +8,10 @@ brand/
   logo-white.svg        Logo chữ Sến nền xanh
   favicon.svg           Favicon
 
-fonts/
-  MaisonNeue-Medium.woff2  Maison Neue Medium — body
-  MaisonNeue-Black.woff2   Maison Neue Black — headline
+fonts/ (served from /public/fonts)
+  MaisonNeue-Medium.otf (+ Italic)     Maison Neue Medium — body
+  MaisonNeue-Black.otf (+ Italic)      Maison Neue Black — headline
+  MaisonNeueExtended-Medium.otf (+ Italic / Black)  Maison Neue Extended — lead/hero
 
 models/
   hero-model.webp       Ảnh model toàn thân, nền tách hoặc ảnh lifestyle dọc (4:5)

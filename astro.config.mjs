@@ -22,4 +22,9 @@ export default defineConfig({
       wrap: true,
     },
   },
+  vite: {
+    optimizeDeps: {
+      include: ["gsap", "gsap/ScrollTrigger"],
+    },
+  },
 });

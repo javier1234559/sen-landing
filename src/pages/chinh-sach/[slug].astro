@@ -1,0 +1,31 @@
+---
+import { getCollection, render } from "astro:content";
+import PageLayout from "@/layouts/PageLayout.astro";
+import PageMeta from "@/components/PageMeta.astro";
+import PolicyPage from "@/components/feature/PolicyPage.astro";
+import { SITE_TITLE } from "@/config";
+
+export async function getStaticPaths() {
+  const policies = await getCollection("policies", ({ data }) => !data.draft);
+  return policies.map((policy) => ({
+    params: { slug: policy.data.slug },
+    props: { policy },
+  }));
+}
+
+const { policy } = Astro.props;
+const { Content } = await render(policy);
+const slug = policy.data.slug;
+---
+
+<PageLayout>
+  <PageMeta
+    slot="meta"
+    title={`${policy.data.title} - ${SITE_TITLE}`}
+    description={policy.data.description}
+    pagePath={`/chinh-sach/${slug}`}
+  />
+  <PolicyPage slot="main" title={policy.data.title} lead={policy.data.lead}>
+    <Content />
+  </PolicyPage>
+</PageLayout>

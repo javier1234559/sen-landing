@@ -1,0 +1,139 @@
+---
+interface Props {
+  title: string;
+  lead?: string;
+}
+
+const { title, lead } = Astro.props;
+---
+
+<div class="policy-page">
+  <img class="policy-corner policy-corner-left" src="/about/left-conner.webp?v=2" alt="" aria-hidden="true" />
+  <img class="policy-corner policy-corner-right" src="/about/right-conner.webp?v=2" alt="" aria-hidden="true" />
+
+  <section class="policy-hero" aria-labelledby="policy-title">
+    <div class="policy-copy">
+      <h1 id="policy-title" class="font-display uppercase">{title}</h1>
+      {lead && <p class="policy-lead font-extended">{lead}</p>}
+      <div class="policy-body prose prose-sen max-w-none">
+        <slot />
+      </div>
+    </div>
+  </section>
+</div>
+
+<style>
+  .policy-page {
+    position: relative;
+    overflow: hidden;
+    min-height: calc(100vh - 5rem);
+    background: #fbf6ef;
+    color: #101b45;
+  }
+
+  /* Absolute inside content section only — scrolls with page, never fixed over footer */
+  .policy-corner {
+    position: absolute;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .policy-corner-left {
+    left: -8%;
+    bottom: 0;
+    width: min(50vw, 38rem);
+  }
+
+  .policy-corner-right {
+    right: 0;
+    bottom: 0;
+    width: min(65vw, 48rem);
+  }
+
+  .policy-hero {
+    position: relative;
+    z-index: 1;
+    width: min(100%, 920px);
+    min-height: calc(100vh - 5rem);
+    margin-inline: auto;
+    padding: clamp(3rem, 6vw, 6rem) clamp(1.25rem, 5vw, 5rem) clamp(8rem, 12vw, 12rem);
+  }
+
+  .policy-copy {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 680px;
+  }
+
+  .policy-copy h1 {
+    margin: 0;
+    color: #182ba0;
+    font-size: clamp(2.4rem, 4vw, 4.5rem);
+    font-weight: 900;
+    line-height: 1.14;
+    letter-spacing: -0.02em;
+  }
+
+  .policy-lead {
+    margin-top: 1.25rem;
+    color: #182ba0;
+    font-size: clamp(1rem, 1.4vw, 1.3rem);
+    font-style: italic;
+    font-weight: 700;
+    line-height: 1.35;
+  }
+
+  .policy-body {
+    margin-top: 2rem;
+  }
+
+  .policy-body :global(img) {
+    display: block;
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-block: 1rem;
+  }
+
+  @media (max-width: 900px) {
+    .policy-hero {
+      min-height: auto;
+      padding-top: 3rem;
+      padding-bottom: 8rem;
+    }
+
+    .policy-corner-left {
+      width: min(55vw, 22rem);
+    }
+
+    .policy-corner-right {
+      width: min(62vw, 26rem);
+    }
+  }
+
+  @media (max-width: 580px) {
+    .policy-hero {
+      padding: 2rem 1.25rem 8rem;
+    }
+
+    .policy-copy h1 {
+      font-size: clamp(2.1rem, 10vw, 3.2rem);
+      line-height: 1.12;
+    }
+
+    .policy-lead {
+      font-size: 1rem;
+    }
+
+    .policy-corner-left {
+      left: -22%;
+      width: 72vw;
+    }
+
+    .policy-corner-right {
+      right: 0;
+      width: 78vw;
+    }
+  }
+</style>

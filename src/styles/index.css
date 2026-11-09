@@ -1,5 +1,61 @@
 @import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap");
 
+@font-face {
+  font-family: "Maison Neue Medium";
+  src: url("/fonts/MaisonNeue-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Maison Neue Medium";
+  src: url("/fonts/MaisonNeue-MediumItalic.otf") format("opentype");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Maison Neue Black";
+  src: url("/fonts/MaisonNeue-Black.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Maison Neue Black";
+  src: url("/fonts/MaisonNeue-BlackItalic.otf") format("opentype");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Maison Neue Extended";
+  src: url("/fonts/MaisonNeueExtended-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Maison Neue Extended";
+  src: url("/fonts/MaisonNeueExtended-MediumItalic.otf") format("opentype");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Maison Neue Extended";
+  src: url("/fonts/MaisonNeueExtended-Black.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -26,14 +82,27 @@
   }
 
   * { @apply border-border; }
-  body { @apply bg-background text-foreground; font-family: "Maison Neue Medium", "Be Vietnam Pro", sans-serif; font-synthesis: none; background-image: radial-gradient(hsl(35 45% 80% / .26) .7px, transparent .7px); background-size: 6px 6px; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+  }
+  [id] { scroll-margin-top: 1.5rem; }
+  body {
+    @apply bg-background font-sans text-foreground;
+    font-synthesis: none;
+    background-image: radial-gradient(hsl(35 45% 80% / .26) .7px, transparent .7px);
+    background-size: 6px 6px;
+  }
 }
 
 @layer components {
   .font-display { font-family: "Maison Neue Black", "Be Vietnam Pro", sans-serif; font-weight: 900; }
+  .font-extended { font-family: "Maison Neue Extended", "Be Vietnam Pro", sans-serif; }
   .sen-header, .sen-footer { width:100%; max-width:none; margin-inline: auto; }
   .sen-header { --header-height: 5.5rem; position:relative; z-index:10; display:block; width:100%; padding:.75rem clamp(1.25rem, 4vw, 4rem); color:#182ba0; }
-  .has-landing-header .sen-header { position:relative; margin-bottom:-4rem; border:0; background:transparent; }
+  .has-landing-header { background-color:#40e8d7; background-image:none; }
+  .has-landing-header .sen-header { position:relative; z-index:20; margin-bottom:calc(-1 * var(--header-height)); border:0; background:transparent; }
+  .has-landing-header main { margin-top:0; padding-top:0; }
   .sen-header-main { display:grid; grid-template-columns:auto minmax(0, 1fr) auto; align-items:center; gap:clamp(1rem, 2.5vw, 3rem); }
   .sen-header-main { min-height:4rem; }
   .sen-logo { display:block; width:5.5rem; line-height:1; }
@@ -73,6 +142,18 @@
   .sen-footer h2 { margin:0 0 .45rem; color:#182ba0; font-family:"Maison Neue Black", "Be Vietnam Pro", sans-serif; font-size:1rem; }
   .sen-footer a { text-decoration:underline; text-underline-offset:3px; }
   .sen-footer small { grid-column:1 / -1; padding-top:1.5rem; font-size:.68rem; }
-  @media (max-width: 720px) { .sen-header { padding-inline:1rem; } .has-landing-header .sen-header { margin-bottom:-2rem; } .sen-header-main { grid-template-columns:auto minmax(0, 1fr) auto; gap:1rem; } .sen-nav { width:100%; overflow:auto; grid-column:1 / -1; grid-row:2; } .sen-nav ul { justify-content:flex-start; gap:1rem; white-space:nowrap; } .sen-actions { margin-left:0; } .sen-header-cta { margin-left:0; padding:.6rem .8rem; font-size:.6rem; } .sen-footer { grid-template-columns:1fr 1fr; gap:2rem 1.25rem; } .footer-brand { grid-column:1 / -1; } .footer-links, .footer-socials { padding-top:0; } .sen-footer small { grid-column:1 / -1; } }
+  @media (max-width: 720px) {
+    .sen-header { --header-height: 7.25rem; padding-inline:1rem; }
+    .has-landing-header .sen-header { margin-bottom:calc(-1 * var(--header-height)); }
+    .sen-header-main { grid-template-columns:auto minmax(0, 1fr) auto; gap:1rem; }
+    .sen-nav { width:100%; overflow:auto; grid-column:1 / -1; grid-row:2; }
+    .sen-nav ul { justify-content:flex-start; gap:1rem; white-space:nowrap; }
+    .sen-actions { margin-left:0; }
+    .sen-header-cta { margin-left:0; padding:.6rem .8rem; font-size:.6rem; }
+    .sen-footer { grid-template-columns:1fr 1fr; gap:2rem 1.25rem; }
+    .footer-brand { grid-column:1 / -1; }
+    .footer-links, .footer-socials { padding-top:0; }
+    .sen-footer small { grid-column:1 / -1; }
+  }
   @media (max-width:440px) { .sen-contact, .sen-socials { width:100%; flex-wrap:wrap; } .sen-header-cta { margin-left:0; } .sen-footer { grid-template-columns:1fr; } .footer-brand, .sen-footer small { grid-column:auto; } }
 }

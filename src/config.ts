@@ -21,6 +21,6 @@ export const SITE_OG_IMAGE = {
   path: "/og-image.png",
   width: 1672,
   height: 941,
-  alt: `${SITE_TITLE} — phụ kiện mang hồn Việt`,
+  alt: `${SITE_TITLE} - phụ kiện mang hồn Việt`,
   type: "image/png",
 } as const;
