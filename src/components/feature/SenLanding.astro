@@ -12,6 +12,12 @@ const features = [
 <div class="sen-page">
   <section class="sen-hero section-frame">
     <h1 class="sr-only">TOTE CÓ GU – XƯA CÓ CHẤT – SẾN CÓ TẤT</h1>
+    <div class="hero-brand">
+      <div class="hero-brand-motion" data-gsap="hero-brand">
+        <img class="hero-logo" src="/sen/brand/logo-new.svg" alt="Sến" />
+        <p class="hero-slogan">TOTE CÓ GU – XƯA CÓ CHẤT – SẾN CÓ TẤT</p>
+      </div>
+    </div>
     <div class="hero-copy" data-gsap="hero-copy">
       <div class="hero-body-card">
         <img src="/sen/art/yellow-card-bg.webp" alt="" aria-hidden="true" />
@@ -36,9 +42,45 @@ const features = [
         <img class="combo-image" src="/collection/product-image.webp" alt="COMBO SẾN gồm túi tote, quạt vải và keychain" />
         <div class="combo-copy"><h3>COMBO SẾN</h3><p>Túi Tote Canvas + Keychain Handmade + Quạt Vải</p><a href="#footer" class="sen-button">Đặt mua combo giao tận tay <span>↗</span></a></div>
       </article>
-      <article class="product-card product-tote" data-gsap="card"><img class="product-image" src="/collection/tote-basket.webp" alt="Túi Tote Canvas Sến" /><div class="product-info"><div><h3>Túi tote canvas</h3><p>Vải canvas mộc tự nhiên, hạn chế hóa chất nhuộm màu, thân thiện môi trường.</p></div><a href="#footer" class="circle-arrow" aria-label="Xem Túi Tote Canvas">↗</a></div></article>
-      <article class="product-card product-keychain" data-gsap="card"><img class="product-image" src="/collection/keychain.webp" alt="Keychain Handmade Sến" /><div class="product-info"><div><h3>Keychain handmade</h3><p>Điểm nhấn cá nhân hóa độc bản.</p></div><a href="#footer" class="circle-arrow" aria-label="Xem Keychain Handmade">↗</a></div></article>
-      <article class="product-card product-fan" data-gsap="card"><img class="product-image" src="/collection/hand-fan.webp" alt="Quạt Vải Sến" /><div class="product-info"><div><h3>Quạt vải</h3><p>Hoàn thiện phong cách hoài niệm, đồng bộ bộ sản phẩm.</p></div><a href="#footer" class="circle-arrow" aria-label="Xem Quạt Vải">↗</a></div></article>
+      <article class="product-card" data-gsap="card">
+        <a class="product-media" href="#footer" aria-label="Xem Túi Tote Canvas">
+          <img class="product-image" src="/collection/tote-basket.webp" alt="Túi Tote Canvas Sến" />
+        </a>
+        <div class="product-info">
+          <div>
+            <span class="product-index">01</span>
+            <h3>Túi tote canvas</h3>
+            <p>Vải canvas mộc tự nhiên, hạn chế hóa chất nhuộm màu, thân thiện môi trường.</p>
+          </div>
+          <a href="#footer" class="circle-arrow" aria-label="Đặt Túi Tote Canvas">↗</a>
+        </div>
+      </article>
+      <article class="product-card" data-gsap="card">
+        <a class="product-media" href="#footer" aria-label="Xem Keychain Handmade">
+          <img class="product-image" src="/collection/keychain.webp" alt="Keychain Handmade Sến" />
+        </a>
+        <div class="product-info">
+          <div>
+            <span class="product-index">02</span>
+            <h3>Keychain handmade</h3>
+            <p>Điểm nhấn cá nhân hóa độc bản.</p>
+          </div>
+          <a href="#footer" class="circle-arrow" aria-label="Đặt Keychain Handmade">↗</a>
+        </div>
+      </article>
+      <article class="product-card" data-gsap="card">
+        <a class="product-media" href="#footer" aria-label="Xem Quạt Vải">
+          <img class="product-image" src="/collection/hand-fan.webp" alt="Quạt Vải Sến" />
+        </a>
+        <div class="product-info">
+          <div>
+            <span class="product-index">03</span>
+            <h3>Quạt vải</h3>
+            <p>Hoàn thiện phong cách hoài niệm, đồng bộ bộ sản phẩm.</p>
+          </div>
+          <a href="#footer" class="circle-arrow" aria-label="Đặt Quạt Vải">↗</a>
+        </div>
+      </article>
     </div>
   </section>
 
@@ -65,12 +107,13 @@ const features = [
 <style>
   .sen-page { width:100%; margin:0; padding:0 0 2rem; }
   .section-frame { position:relative; overflow:hidden; background:#fffaf1cc; }
+  
   .sen-hero {
     position: relative;
     display: block;
     width: 100%;
-    aspect-ratio: 992 / 612;
-    min-height: clamp(420px, 62vw, 820px);
+    aspect-ratio: 2400 / 1489;
+    min-height: clamp(460px, 68vw, 860px);
     overflow: hidden;
     isolation: isolate;
     background: #40e8d7;
@@ -81,11 +124,44 @@ const features = [
     position: absolute;
     z-index: -1;
     inset: 0;
-    background: url("/og-image.png") center center / cover no-repeat;
+    background: url("/hero/cover-hero.webp") center center / cover no-repeat;
+  }
+  .hero-brand {
+    position: absolute;
+    z-index: 2;
+    top: calc(38% - 5rem);
+    left: 50%;
+    width: min(92%, 44rem);
+    padding-inline: 1rem;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+  }
+  .hero-brand-motion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .hero-logo {
+    display: block;
+    width: clamp(9.5rem, 26vw, 20rem);
+    height: auto;
+    filter: drop-shadow(0 10px 24px rgb(24 43 160 / 0.18));
+  }
+  .hero-slogan {
+    margin: clamp(0.55rem, 1.4vw, 1.05rem) 0 0;
+    color: #182ba0;
+    font-family: "Maison Neue Black", "Be Vietnam Pro", sans-serif;
+    font-size: clamp(0.82rem, 2.35vw, 1.7rem);
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    line-height: 1.12;
+    text-transform: uppercase;
+    text-wrap: balance;
   }
   .hero-copy {
     position: absolute;
-    z-index: 2;
+    z-index: 3;
     left: 0;
     right: 0;
     bottom: 0;
@@ -112,7 +188,7 @@ const features = [
   .sen-button:hover { transform:translateY(-3px); background:#ec3f71; }
   .sen-button span { font-size:1.2rem; }
 
-  .story { display:grid; grid-template-columns:1.08fr .95fr 1.2fr; align-items:stretch; min-height:310px; padding:0; border-top:0; background:#fffaf1; }
+  .story { display:grid; grid-template-columns:1.08fr .95fr 1.2fr; align-items:stretch; min-height:310px; padding:2rem 0 0; border-top:0; background:#fffaf1; }
   .story-architecture { min-width:0; overflow:hidden; }
   .story-architecture img { display:block; width:100%; height:100%; object-fit:cover; object-position:center; mix-blend-mode:multiply; }
   .story-copy { display:flex; flex-direction:column; justify-content:center; padding:2rem clamp(1.5rem, 3vw, 3.5rem); }
@@ -128,19 +204,72 @@ const features = [
   .section-heading { display:flex; align-items:end; justify-content:space-between; margin-bottom:1.5rem; }
   .section-heading h2 { color:#182ba0; font-size:clamp(2.7rem, 5.5vw, 5.8rem); font-style:italic; text-transform:uppercase; }
   .section-heading h2 em { color:#ec3f71; }
-  .collection-grid { display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:clamp(1.25rem, 3vw, 3rem); align-items:start; }
-  .combo-card { display:grid; grid-column:1 / -1; grid-template-columns:minmax(0, 1.45fr) minmax(280px, .8fr); gap:clamp(1.5rem, 4vw, 5rem); align-items:center; min-width:0; background:transparent; }
-  .product-card { min-width:0; background:transparent; }
-  .combo-image, .product-image { display:block; width:100%; height:auto; object-fit:cover; }
-  .combo-image { aspect-ratio:550 / 310; border-radius:1.25rem; }
-  .product-image { aspect-ratio:329 / 532; }
+  .collection-grid { display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:clamp(1.5rem, 3vw, 2.5rem); align-items:start; }
+  .combo-card { display:grid; grid-column:1 / -1; grid-template-columns:minmax(0, 1.45fr) minmax(280px, .8fr); gap:clamp(1.5rem, 4vw, 5rem); align-items:center; min-width:0; margin-bottom:clamp(1rem, 2vw, 2rem); background:transparent; }
+  .combo-image { display:block; width:100%; height:auto; aspect-ratio:550 / 310; object-fit:cover; border-radius:1.25rem; }
   .combo-copy { max-width:31rem; padding:.85rem .15rem 0; }
-  .combo-copy h3, .product-info h3 { color:#182ba0; font-family:"Maison Neue Black", "Be Vietnam Pro", sans-serif; font-size:clamp(1.2rem, 1.8vw, 2rem); line-height:1.05; }
-  .combo-copy p, .product-info p { margin-top:.45rem; color:#182ba0; font-size:.78rem; font-weight:500; }
+  .combo-copy h3 { color:#182ba0; font-family:"Maison Neue Black", "Be Vietnam Pro", sans-serif; font-size:clamp(1.2rem, 1.8vw, 2rem); line-height:1.05; }
+  .combo-copy p { margin-top:.45rem; color:#182ba0; font-size:.78rem; font-weight:500; }
   .combo-copy .sen-button { margin-top:1rem; }
-  .product-info { display:flex; justify-content:space-between; align-items:end; gap:.5rem; padding:.8rem .15rem 0; }
-  .product-info h3 { font-size:clamp(.9rem, 1.1vw, 1.1rem); }
-  .circle-arrow { width:2.2rem; height:2.2rem; }
+
+  .product-card {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .product-media {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    aspect-ratio: 1;
+    border-radius: 1.35rem;
+    background: #dceff5;
+    transition: transform 0.35s ease;
+  }
+  .product-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.45s cubic-bezier(.22,1,.36,1);
+  }
+  .product-card:hover .product-media { transform: translateY(-5px); }
+  .product-card:hover .product-image { transform: scale(1.04); }
+  .product-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 0.85rem;
+    padding: 0.15rem 0.2rem 0;
+  }
+  .product-index {
+    display: block;
+    margin-bottom: 0.35rem;
+    color: #ec3f71;
+    font-family: "Maison Neue Medium", "Be Vietnam Pro", sans-serif;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+  }
+  .product-info h3 {
+    color: #182ba0;
+    font-family: "Maison Neue Black", "Be Vietnam Pro", sans-serif;
+    font-size: clamp(1rem, 1.3vw, 1.25rem);
+    line-height: 1.1;
+    text-transform: uppercase;
+  }
+  .product-info p {
+    margin-top: 0.4rem;
+    max-width: 18rem;
+    color: #182ba0;
+    font-size: 0.78rem;
+    font-weight: 500;
+    line-height: 1.4;
+    opacity: 0.82;
+  }
+  .circle-arrow { width: 2.2rem; height: 2.2rem; }
 
   .values { display:grid; grid-template-columns:repeat(4,1fr); min-height:125px; border-top:0; border-radius:0 0 1.4rem 1.4rem; background:#fffaf1 url('/pre-footer/background.webp') center / cover no-repeat; }
   .value-item { display:flex; justify-content:center; align-items:center; gap:1rem; padding:1.25rem clamp(.75rem, 2vw, 2rem); color:#182ba0; font-family:"Maison Neue Medium", "Be Vietnam Pro", sans-serif; font-size:clamp(.68rem, .9vw, .9rem); font-weight:700; line-height:1.2; }
@@ -155,9 +284,22 @@ const features = [
   @media (prefers-reduced-motion: reduce) { .marquee-track { animation-play-state:paused; } }
 
   @media (max-width:900px) {
-    .sen-hero { min-height: clamp(460px, 70vw, 640px); }
-    .hero-copy { padding: 1.25rem 1.25rem 1.5rem; }
-    .hero-body-card { width: min(100%, 570px); }
+    .sen-hero { min-height: clamp(520px, 78vw, 700px); }
+    .hero-brand { top: calc(24% - 1rem); width: min(86%, 30rem); }
+    .hero-logo { width: clamp(8.5rem, 22vw, 14rem); }
+    .hero-slogan { font-size: clamp(0.78rem, 2.4vw, 1.15rem); }
+    .hero-copy { padding: 1rem 1.25rem 1.75rem; }
+    .hero-body-card {
+      width: min(78%, 28rem);
+      padding: 2.25rem 1.75rem 1.75rem 2rem;
+    }
+    .hero-body-card > div { padding: 1.25rem; }
+    .hero-copy p { font-size: 0.9rem; margin-bottom: 1rem; }
+    .hero-body-card .sen-button {
+      padding: 0.7rem 1.1rem;
+      font-size: 0.72rem;
+      gap: 0.85rem;
+    }
     .story { grid-template-columns:1fr 1fr; }
     .story-architecture { min-height:250px; }
     .story-copy { padding-inline:1.5rem; }
@@ -172,9 +314,20 @@ const features = [
   @media (max-width:580px) {
     .sen-hero {
       aspect-ratio: auto;
-      min-height: min(78svh, 640px);
+      min-height: min(82svh, 680px);
     }
-    .sen-hero::before { background-position: center center; background-size: cover; }
+    .sen-hero::before { background-position: center 42%; background-size: cover; }
+    .hero-brand {
+      top: 30%;
+      width: min(94%, 22rem);
+      padding-inline: 0.75rem;
+    }
+    .hero-logo { width: clamp(8.5rem, 46vw, 12.5rem); }
+    .hero-slogan {
+      margin-top: 0.55rem;
+      font-size: clamp(0.72rem, 3.6vw, 0.95rem);
+      letter-spacing: -0.025em;
+    }
     .hero-copy { padding: 1rem 1rem 1.4rem; }
     /* Keep yellow fully on-screen; inset copy inside the brush */
     .hero-body-card {
@@ -234,8 +387,9 @@ const features = [
     .combo-card { grid-column:auto; grid-template-columns:1fr; gap:1rem; }
     .combo-copy { padding-top:.65rem; }
     .combo-image { border-radius: 1rem; }
-    .product-info { align-items:start; }
-    .product-info .circle-arrow { display:none; }
+    .product-media { border-radius: 1.1rem; }
+    .product-info { align-items: start; }
+    .product-info .circle-arrow { display: none; }
     .marquee-card { flex-basis:13rem; }
     .marquee-card img { height:10rem; }
     .values { grid-template-columns:repeat(2,1fr); }
@@ -263,12 +417,21 @@ const features = [
     bootedPath = path;
 
     ctx = gsap.context(() => {
+      const heroBrand = root.querySelector(".hero-brand-motion");
+      if (heroBrand) {
+        gsap.fromTo(
+          heroBrand,
+          { autoAlpha: 0, y: 18, scale: 0.97 },
+          { autoAlpha: 1, y: 0, scale: 1, duration: 0.85, delay: 0.05, ease: "power3.out", clearProps: "transform" },
+        );
+      }
+
       const heroCard = root.querySelector(".hero-body-card");
       if (heroCard) {
         gsap.fromTo(
           heroCard,
           { autoAlpha: 0, y: 36, scale: 0.96 },
-          { autoAlpha: 1, y: 0, scale: 1, duration: 0.9, delay: 0.08, ease: "power3.out", clearProps: "transform" },
+          { autoAlpha: 1, y: 0, scale: 1, duration: 0.9, delay: 0.18, ease: "power3.out", clearProps: "transform" },
         );
       }
 
@@ -308,13 +471,6 @@ const features = [
         const inView = rect.top < window.innerHeight * 0.96 && rect.bottom > 40;
         if (inView) playReveal(el, index);
         else observer?.observe(el);
-      });
-
-      root.querySelectorAll<HTMLElement>(".product-card").forEach((card) => {
-        const image = card.querySelector<HTMLElement>(".product-image");
-        if (!image) return;
-        card.addEventListener("mouseenter", () => gsap.to(image, { y: -10, scale: 1.02, duration: 0.3, ease: "power2.out" }));
-        card.addEventListener("mouseleave", () => gsap.to(image, { y: 0, scale: 1, duration: 0.35, ease: "power2.out" }));
       });
 
       const combo = root.querySelector<HTMLElement>(".combo-card");
